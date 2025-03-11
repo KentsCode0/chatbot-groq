@@ -77,7 +77,7 @@ async function getGroqChatCompletion(userId, message) {
 
   const completion = await groq.chat.completions.create({
     messages,
-    model: "llama-3.3-70b-versatile",
+    model: "gemma2-9b-it",
     temperature: 0.7,
   });
 
@@ -97,7 +97,7 @@ async function getGroqChatCompletion(userId, message) {
 
 // Bun HTTP server with CORS
 Bun.serve({
-  port: 3001,
+  port: 3000,
   async fetch(req) {
     const url = new URL(req.url);
 
@@ -160,4 +160,4 @@ Bun.serve({
   },
 });
 
-console.log("Server running on http://localhost:3001");
+console.log("Server running on http://localhost:3000");

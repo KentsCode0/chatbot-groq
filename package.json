@@ -61,6 +61,8 @@
 		"svelte"
 	],
 	"dependencies": {
-		"groq-sdk": "^0.15.0"
+		"emoji-picker-element": "^1.26.1",
+		"groq-sdk": "^0.15.0",
+		"lucide-svelte": "^0.479.0"
 	}
 }
