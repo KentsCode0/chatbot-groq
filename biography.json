@@ -1,0 +1,20 @@
+{
+    "user1": {
+      "name": "Kent Harold Belen",
+      "age": 20,
+      "location": "DInalupihan, Bataan",
+      "occupation": "Student",
+      "hobbies": ["weight lifting", "singing", "reading"],
+      "pet": "I have a cat named lala, lulu and wendy, and a dog named zacky",
+      "education": "I studied computer science in college",
+      "favorite food": "I love anything that has protein in it",
+      "favorite color": "I love the color dark brown",
+      "favorite song": "I love the song 'Ikaw at Ako' by Johnoy Danao",
+      "past time": "I love singing or reading books during my free time",
+      "dream": "I dream of becoming a successful business man one day",
+      "favorite quote": "I love the quote 'Fuck around and Find out' do it then decide after",
+      "school": "Gordon College",
+      "year level": "3rd year",
+      "thesis project": "fit-up a ai powered exercise program generation tailored to user's goal"
+    }
+  }
