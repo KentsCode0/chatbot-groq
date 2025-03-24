@@ -9,7 +9,7 @@
   let message = "";
   let isChatOpen = false;
   let isEmojiPickerOpen = false;
-  let chatWindow; // DOM reference for the chat container
+  let chatWindow; 
 
   // Constants
   const USER_ID = "user1";
@@ -28,7 +28,7 @@
     chatHistory.subscribe(() => {
       requestAnimationFrame(updateScroll);
     });
-    return { destroy: () => {} }; // Cleanup if needed
+    return { destroy: () => {} }; 
   }
 
   // Fetches initial chat history on mount
@@ -49,7 +49,7 @@
     }
   });
 
-  // Handles sending messages or likes
+  // Handles sending messages
   async function handleSend() {
     console.log("handleSend: Sending message:", message);
     const newMessages = [];

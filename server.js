@@ -1,13 +1,13 @@
 import { Groq } from "groq-sdk";
 
-// Initialize Groq with your API key
+// Initialize Groq API key
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 // File paths for storing data
 const DATA_FILE = "userData.json";
 const BIO_FILE = "biography.json";
 
-// Load user data from JSON file (or initialize as empty object if file doesn't exist)
+// Load user data from JSON file
 let userData = {};
 try {
   const fileContent = await Bun.file(DATA_FILE).text();
@@ -83,7 +83,6 @@ async function getGroqChatCompletion(userId, message) {
 
   const response = completion.choices[0]?.message?.content || "Sorry, I couldn't process that.";
 
-  // Store the conversation for context persistence (excluding the system message)
   userData[userId] = previousMessages.concat([
     { role: "user", content: message },
     { role: "assistant", content: response },
@@ -103,7 +102,7 @@ Bun.serve({
 
     // Add CORS headers
     const headers = {
-      "Access-Control-Allow-Origin": "http://localhost:5173", // Adjust to your frontend URL
+      "Access-Control-Allow-Origin": "http://localhost:5173", 
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
     };
